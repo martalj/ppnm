@@ -1,0 +1,6 @@
+My max int = 2147483647 and int.MaxValue = 2147483647
+My min int = -2147483648 and int.MinValue = -2147483648
+My value x = 2.22044604925031E-16, the machine value = 2.22044604925031E-16
+My value y = 1.192093E-07, the machine value = 1.19209289550781E-07
+sumA-1 = 0.000000e+000 should be 1.110223e-010
+sumB-1 = 1.110223e-010 should be 1.110223e-010
