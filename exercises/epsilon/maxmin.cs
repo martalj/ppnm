@@ -40,3 +40,10 @@ public class machineepsilon{
 	}
 }
 
+public class boolean{
+	public static void approx(double a, double b, double tau=1e-9, double epsilon=1e-9){
+	if (Abs(a-b)<tau){WriteLine("absolute true");}
+	if (Abs(a-b)/(Abs(a)-Abs(b))< epsilon){WriteLine("relative true");}
+	else {WriteLine("false");}	
+	}
+}

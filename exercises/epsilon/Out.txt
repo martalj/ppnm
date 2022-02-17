@@ -4,3 +4,4 @@ My value x = 2.22044604925031E-16, the machine value = 2.22044604925031E-16
 My value y = 1.192093E-07, the machine value = 1.19209289550781E-07
 sumA-1 = 0.000000e+000 should be 1.110223e-010
 sumB-1 = 1.110223e-010 should be 1.110223e-010
+relative true

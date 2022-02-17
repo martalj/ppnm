@@ -7,5 +7,6 @@ class main{
 		machineepsilon.epsdouble();
 		machineepsilon.epsfloat();
 		machineepsilon.epstiny();
+		boolean.approx(5,6);
 	}
 }
