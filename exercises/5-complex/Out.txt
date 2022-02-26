@@ -1,0 +1,7 @@
+sqrt(-1) = 6.12e-17+1i, should be i
+sqrt(i) = 0.707+0.707i, should be 0.707+0.707i
+exp(i) = 0.54+0.841i, should be 0.54+0.84i
+exp(i*pi) = -1+1.22e-16i, should be -1
+pow(i,i) = 0.208+0i, should be 0.208
+log(i) = 0+1.57i, should be 0.682i
+sin(i*pi) = 0+11.5i, should be 11.549i
