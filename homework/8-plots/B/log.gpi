@@ -1,0 +1,11 @@
+\
+set terminal png ;\
+set output "gamma.png" ;\
+set xlabel "$x$" ;\
+set ylabel "$y$" ;\
+set tics out ;\
+set title "Gamma function" ;\
+set key right bottom ;\
+plot [-5:5] [-5:5] "Out.txt" index 0 using 1:2 with lines title "Gamma($x$)",\
+"tabpoints.txt" using 1:2 with points pointtype 2 title "tabulated data" \
+
