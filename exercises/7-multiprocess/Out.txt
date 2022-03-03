@@ -1,0 +1,6 @@
+Two threads: harmonic sum over N = 1E+08.
+Summing from 5E+07 to 1E+08...
+Summing from 1 to 5E+07...
+Summing from 1 to 5E+07 gives 18.3047492182933.
+Summing from 5E+07 to 1E+08 gives 0.693147185559714.
+Two threads: harmonic sum from 1 to 1E+08 = 18.997896403853
