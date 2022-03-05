@@ -1,0 +1,9 @@
+\
+set terminal png ;\
+set output "exp.png" ;\
+set xlabel "$x$" ;\
+set ylabel "$y$" ;\
+set tics out ;\
+set key left ;\
+plot "Out.txt" index 0 using 1:2 with lines title "Exp($x$)";\
+
