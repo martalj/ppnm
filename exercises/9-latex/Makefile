@@ -10,4 +10,4 @@ exp.png: Out.txt
 	cat log.gpi | pyxplot
 
 clean:
-	$(RM) *.png [Oo]ut* *.exe 
+	$(RM) *.png [Oo]ut* *.exe
