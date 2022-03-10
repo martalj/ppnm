@@ -1,0 +1,10 @@
+\
+set terminal png ;\
+set output "erf.png" ;\
+set xlabel "$x$" ;\
+set ylabel "$y$" ;\
+set tics out ;\
+set title "error function" ;\
+set key left top ;\
+plot [-2:2] [-1:1] "Out_erf.txt" index 0 using 1:2 with lines title "erf($x$)";\
+
