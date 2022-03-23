@@ -1,0 +1,9 @@
+\
+set terminal png ;\
+set output "spline.png" ;\
+set xlabel "$x$" ;\
+set ylabel "$y$" ;\
+set tics out ;\
+plot "Out.txt" index 0 with points pointtype 1 title "data"\
+,"Out.txt" index 1 with points pointtype 2 title "linterp";
+
