@@ -18,7 +18,8 @@ class main{
 
 		for(int j=0;j<N;j++){
 			double z=x[0]+j*(x[n-1]-x[0])/(N-1);
-			WriteLine($"{z} {lint.linterp(x,y,z)}");
+			WriteLine($"{z} {lint.linterp(x,y,z)} {lint.linterpInteg(x,y,z)} ");
+			
 			}
 	}
 }
