@@ -27,7 +27,7 @@ public static partial class lint{
 			integral += y[i]*dx+0.5*dy*dx;
 			i++;
 			}
-		integral += y[i]*(z-x[i]) + 0.5*(linterp(x,y,z)-y[i])*(z-x[i]);
+		integral += y[i]*(z-x[i]) + 0.5*(y[i+1]-y[i])/(x[i+1]+x[i])*(z-x[i])*(z-x[i]);
 	return integral;
 	}
 
