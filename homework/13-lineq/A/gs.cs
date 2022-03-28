@@ -16,4 +16,13 @@ public class gs{
 		A.print("A"); R.print("R"); Q.print("Q");
 	return Q;
 	}
+
+	public static vector QRGSsolve(matrix Q, matrix R, vector b){
+		matrix QT = Q.transpose();
+		vector x = QT*b; 
+		for(int n=1;n<x.size;n++){
+			x[n-1] = (x[n-1] - R[n-1,n])/R[n-1,1];
+		}
+	return x;
+	}
 }

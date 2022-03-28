@@ -4,7 +4,7 @@ using static System.Math;
 class main{
 	public static void Main(){
 		var rnd=new System.Random();
-		int n=5,N=10*n;
+		int n=10,N=10*n;
 		var x=new double[n];
 		var y=new double[n];
 		for(int i=0;i<n;i++){
