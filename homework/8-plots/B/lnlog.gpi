@@ -6,6 +6,6 @@ set ylabel "$y$" ;\
 set tics out ;\
 set title "Gamma function" ;\
 set key right bottom ;\
-plot [-5:5] [-5:5] "Out.txt" index 0 using 1:2 with lines title "ln(Gamma($x$))",\
+plot [-5:5] [-5:5] "Out_ln.txt" index 0 using 1:2 with lines title "ln(Gamma($x$))",\
 "tabpoints.txt" using 1:2 with points pointtype 1 title "tabulated data" \
 

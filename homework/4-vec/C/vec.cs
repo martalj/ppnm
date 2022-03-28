@@ -18,12 +18,14 @@ public class vec{
 		if(Abs(a-b)/(Abs(a)+Abs(b))<eps)return true;
 		return false;
 		}
+
 	public bool approx(vec other){
-		if(!approx(this.x,other.x)return false;
-		if(!approx(this.y,other.y)return false;
-		if(!approx(this.z,other.z)return false;
+		if(!approx(this.x,other.x))return false;
+		if(!approx(this.y,other.y))return false;
+		if(!approx(this.z,other.z))return false;
 		return true;
 		}
+
 	public static bool approx(vec u, vec v){ return u.approx(v); }
 
 }

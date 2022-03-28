@@ -15,4 +15,7 @@ public class vec{
 	public static double dot(vec u, vec v){return (u.x*v.x+u.y*v.y+u.z*v.z);}
 	public static vec prod(vec u, vec v){return new vec(u.y*v.z-u.z*v.y,u.z*v.x-u.x*v.z,u.x*v.y-u.y*v.x);}
 	public static double norm(vec u){return (Abs(u.x)+Abs(u.y)+Abs(u.z));}
+	public override string ToString(){
+		return("x,y,z = " + x + ", " + y + ", " + z);
+		}
 }

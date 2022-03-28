@@ -1,5 +1,6 @@
-u = 100 200 300
-v = 1 2 3
-u cross prod v = 0 0 0
-u dot c = 1400
-norm(u) = 600
+u = 2 3 4
+v = 5 6 7
+u cross prod v = -3 6 -3
+u dot v = 56
+norm(u) = 9
+x,y,z = 2, 3, 4
