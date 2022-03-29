@@ -2,17 +2,15 @@ using static System.Math;
 using static System.Console;
 
 public class main{
-	static double gamma(double x){
-	///single precision gamma function (Gergo Nemes, from Wikipedia)
-		if(x<0)return PI/Sin(PI*x)/gamma(1-x);
-		if(x<9)return gamma(x+1)/x;
-			double lngamma=x*Log(x+1/(12*x-1/x/10))-x+Log(2*PI/x)/2;
+	static double lngamma(double x){
+	///log gamma function (from wikipedia, based on Stirlings approximation)
+		double lngamma=x*Log(x)-x-1/2*Log(x)+1/2*Log(2*PI)+1/(12*x)-1/(360*x*x*x);
 		return lngamma;
 	}
 
 public static void Main(){
-	for(double x=-5;x<=5;x+=1.0/32)
-		WriteLine($"{x} {gamma(x)}");
+	for(double x=0.1;x<=10;x+=1.0/32)
+		WriteLine($"{x} {lngamma(x)}");
 	}
 
 }

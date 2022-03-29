@@ -4,8 +4,8 @@ set output "lngamma.png" ;\
 set xlabel "$x$" ;\
 set ylabel "$y$" ;\
 set tics out ;\
-set title "Gamma function" ;\
-set key right bottom ;\
-plot [-5:5] [-5:5] "Out_ln.txt" index 0 using 1:2 with lines title "ln(Gamma($x$))",\
-"tabpoints.txt" using 1:2 with points pointtype 1 title "tabulated data" \
+set title "ln(Gamma)" ;\
+set key left top ;\
+plot [0:10] "Out_ln.txt" index 0 using 1:2 with lines title "ln(Gamma($x$))",\
+"tabpoints_ln.txt" using 1:ln($2) with points pointtype 1 title "tabulated data" \
 
