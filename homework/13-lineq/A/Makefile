@@ -16,3 +16,6 @@ matlib.dll: \
 
 %.dll: %.cs
 	mcs -t:library -out:./%.dll $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
+
+clean:
+	$(RM) *.exe *.txt *.dll
