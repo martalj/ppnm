@@ -23,6 +23,10 @@ public vector(double a, double b, double c)
 	{ data = new double[]{a,b,c}; }
 public vector(double a, double b, double c, double d)
 	{ data = new double[]{a,b,c,d}; }
+public vector(double a, double b, double c, double d, double e)
+	{ data = new double[]{a,b,c,d,e}; }
+public vector(double a, double b, double c, double d, double e, double f)
+	{ data = new double[]{a,b,c,d,e,f}; }
 public vector(string s){
 	char[] delims={',',' '};
 	var options = StringSplitOptions.RemoveEmptyEntries;

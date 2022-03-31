@@ -2,28 +2,29 @@ using static System.Console;
 using static System.Math;
 
 public class gs{
-	public static matrix QRGSdecomp(matrix A, matrix R){
+	public static void QRGSdecomp(matrix A, matrix R, matrix Q){
 		int m = A.size2;
-		matrix Q = new matrix(A.size1,m);
-		matrix v = A.copy();
 		for(int i=0;i<m;i++){
-			R[i,i]=v[i].norm();
-			Q[i] = v[i]/R[i,i];
+			R[i,i]=Q[i].norm();
+			Q[i] = Q[i]/R[i,i];
 			for(int j=i+1;j<m;j++){
-				R[i,j] = Q[i].dot(A[j]);
-				v[j] -= R[i,j]*Q[i];
+				R[i,j] = Q[i].dot(Q[j]);
+				Q[j] -= R[i,j]*Q[i];
 				}
 		}	
-		A.print("A"); R.print("R"); Q.print("Q");
-	return Q;
+		//A.print("A"); R.print("R"); Q.print("Q");
 	}
 
 	public static vector QRGSsolve(matrix Q, matrix R, vector b){
 		matrix QT = Q.transpose();
 		vector x = QT*b;
-		for(int n=1;n<x.size;n++){
-			x[n-1] = (x[n-1] - R[n-1,n])/R[n-1,1];
-		}
+		for(int i=x.size-1;i>=0;i--){
+			double sum = 0;
+			for(int n=i+1;n<x.size;n++){
+				sum += R[i,n]*x[n];
+				}
+			x[i] = (x[i] - sum)/R[i,i];
+			}
 	return x;
 	}
 }
