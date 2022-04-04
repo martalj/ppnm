@@ -1,4 +1,4 @@
-using static System.Math;
+'using static System.Math;
 using static System.Console;
 
 public class leastsquares{
@@ -13,7 +13,7 @@ public class leastsquares{
 		}
 	
 	public static vector lsfit(Func<double, double> fs, double[] x, double[] y, double[] dy){
-		int n = x.size, m=fs.Length;
+		int n = x.size, m = fs.Length;
 		var A = new matrix(n,m);
 		var b = new vector(n);
 		for(int i=0;i<n;i++){
