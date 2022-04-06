@@ -1,8 +1,8 @@
 \
 set terminal png ;\
 set output "leastsq.png" ;\
-set xlabel "$Days$" ;\
-set ylabel "$Activity$" ;\
+set xlabel "Days" ;\
+set ylabel "Activity" ;\
 plot "Out.txt" index 0 with errorbars title "Tab points"\
 ,"Out.txt" index 1 with lines linetype 2 title "Fit"\
 

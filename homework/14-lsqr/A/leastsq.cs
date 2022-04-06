@@ -2,15 +2,9 @@ using static System.Math;
 using static System.Console;
 using System;
 
-public class leastsquares{
-//	double f(int i, double z){
-//		if(i==0) return 1;
-//		if(i==1) return z;
-//		else return Write("Not a number");
-//		}
-	
+public class leastsquares{	
 	public static vector lsfit(Func<double, double>[] fs, double[] x, double[] y, double[] dy){
-		int n = x.Length, m = 3;
+		int n = x.Length, m = fs.Length;
 		var A = new matrix(n,m);
 		var b = new vector(n);
 		for(int i=0;i<n;i++){

@@ -30,9 +30,13 @@ public class main{
 		WriteLine();		
 		WriteLine();
 
-		for(double i = 0;i<15;i+=0.2){
-			WriteLine($"{i} {c[0]+i*c[1]+i*i*c[2]}");			
+		for(double x=0;x<15;x+=0.2){
+			WriteLine($"{x} {c[0]+c[1]*x+c[2]*x*x}");
 			}
-		
+
+		WriteLine();
+		WriteLine();
+
+		c.print("c=");
 	}//Main function
 }//class
