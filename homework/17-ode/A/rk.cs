@@ -12,7 +12,7 @@ public class rk{
 	}//rkstep12
 
 	public static vector driver(
-			Func<double,vector,vector> f, double a, vector ya, double b, 
+			Func<double,vector,vector> F, double a, vector ya, double b, 
 			double h=0.01, double acc = 0.01, double eps=0.01){
 		if(a>b) throw new Exception("driver: a>b");
 		double x=a; vector y=ya;
@@ -23,7 +23,7 @@ public class rk{
 			double tol = Max(acc,yh.norm()*eps)*Sqrt(h/(b-a));
 			double err = erv.norm();
 			if(err<=tol){x+=h;y=yh;}
-			h*= Min(Pow(tol(err,0.25)*0.95,2);
+			h*= Min(Pow(tol/err,0.25)*0.95,2);
 		}while(true);
 	}//driver
 }//Class
