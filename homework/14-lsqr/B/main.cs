@@ -37,11 +37,5 @@ public class main{
 			WriteLine($"{x} {c[0]+c[1]*x}");
 			}
 
-		WriteLine();
-		WriteLine();
-
-		c.print("c=");
-		WriteLine($"Lambda = {-c[1]}");
-		WriteLine($"Halflife = {Log(2)/-c[1]} days, the experimental value is 3.6319 days");
 	}//Main function
 }//class
