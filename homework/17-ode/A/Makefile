@@ -1,9 +1,17 @@
+all: Out.txt ode.png pend.png
+
 Out.txt: main.exe
 	mono $< > $@
 
 main.exe: main.cs matlib.dll
 
 LIBDIR = ../../../matlib
+
+ode.png: Out.txt
+	cat fig.gpi | pyxplot
+
+pend.png: Out.txt
+	cat fig_pend.gpi | pyxplot
 
 matlib.dll: \
 	$(LIBDIR)/matrix/matrix.cs \
@@ -19,4 +27,4 @@ matlib.dll: \
 	mcs -t:library $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
 
 clean:
-	$(RM) *.exe *.txt *.dll
+	$(RM) *.exe *.txt *.dll *.png
