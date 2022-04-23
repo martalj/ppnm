@@ -21,4 +21,10 @@ public class genlist<T>{
 		} //for
 	} //remove
 
+	public void clear(){
+		while(size>0){
+			this.remove(0);
+		} //while
+	} //clear
+
 } //class

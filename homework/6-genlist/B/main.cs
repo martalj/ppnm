@@ -20,5 +20,10 @@ public class main{
 		}
 		WriteLine();
 
+		list.clear();
+		for(int i = 0;i<list.size;i++){
+			Write($"C{list.data[i]} ");
+		}
+		WriteLine();
 	}
 }
