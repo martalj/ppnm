@@ -1,4 +1,4 @@
-all: Out.txt ode.png pend.png
+all: Out.txt pend.png
 
 Out.txt: main.exe
 	mono $< > $@
@@ -6,9 +6,6 @@ Out.txt: main.exe
 main.exe: main.cs matlib.dll
 
 LIBDIR = ../../../matlib
-
-ode.png: Out.txt
-	cat fig.gpi | pyxplot
 
 pend.png: Out.txt
 	cat fig_pend.gpi | pyxplot
