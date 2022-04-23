@@ -16,8 +16,8 @@ public class rk{
 			double h=0.01, double acc = 0.01, double eps=0.01){
 		if(a>b) throw new Exception("driver: a>b");
 		double x=a; vector y=ya;
-		if(xlist!=null){xlist.clear();xlist.push(x);}
-		if(ylist!=null){ylist.clear();ylist.push(y);}
+		if(xlist!=null){xlist = new genlist<double> xlist;xlist.push(x);}
+		if(ylist!=null){ylist = new genlist<double> ylist;ylist.push(y);}
 		do{
 			if(x>=b) return y;
 			if(x+h>b) h=b-x;
