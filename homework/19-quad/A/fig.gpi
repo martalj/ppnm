@@ -2,6 +2,7 @@ set terminal png
 set output "erf.png"
 set xlabel "z"
 set ylabel "y"
-plot "Out.txt" index 1 using 1:2 with lines linetype 1 title "erf(z)"
-plot "tabpoints.data" with lines linetype 2 title "tab points"
+set key bottom right
+plot "Out.txt" index 1 using 1:2 with lines linetype 1 title "erf(z)", \
+"tabpoints.data" with points title "tab points"
 

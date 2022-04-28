@@ -25,7 +25,7 @@ class main{
 		WriteLine();
 
 		Func<double, double> erf = delegate(double x){return 2/Sqrt(PI)*Exp(-x*x);};
-		for(double i=-3;i<3;i+=0.001){
+		for(double i=-4;i<4;i+=0.001){
 			double res = quad.integrate(erf,a,i);
 			WriteLine($"{i} {res}");
 		} //for
