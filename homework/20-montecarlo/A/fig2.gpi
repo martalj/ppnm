@@ -1,0 +1,5 @@
+set terminal png
+set output "mc2.png"
+set key bottom right
+plot "Out.txt" index 1 using 1:2 with linespoints linetype 2 title "Monte Carlo", 1.3932 with lines title "Exact"
+
