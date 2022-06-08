@@ -4,7 +4,7 @@ using static System.Math;
 
 class main{
 	static void Main(){
-	for(double x=0;x<10;x+=0.1)WriteLine($"{x} {ex(x)}");
+	for(double x=0;x<10;x+=0.1)WriteLine($"{x} {ex(x)} {Exp(x)} {Abs(ex(x)-Exp(x))}  {Abs(ex(x)-Exp(x))/(Abs(ex(x))+Abs(Exp(x)))}");
 	}
 
 	static double ex(double x){
