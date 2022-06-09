@@ -1,0 +1,6 @@
+Initial list:
+2 67 32478 392 123 
+Removing element number 3:
+2 67 32478 123 
+Clearing the list:
+

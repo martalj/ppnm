@@ -2,13 +2,11 @@ OUT = Out.data
 IN = input.data
 
 all:$(OUT)
-	cat $<
 
 $(OUT): main.exe $(IN)
 	> $@
-	echo 'Exercise "genlist" part A: simple generic list' >> $@
 	echo '\ninput: irregular table:' >>$@
-	cat $(IN) >> $@
+	cat $(IN) >>$@
 	echo '\noutput: regular table:' >>$@
 	mono main.exe < $(IN) >> $@
 
