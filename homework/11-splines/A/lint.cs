@@ -20,14 +20,13 @@ public static partial class lint{
 
 	public static double linterpInteg(double[] x, double[] y, double z){
 		double integral = 0;
-		int i = 0;
-		while(z > x[i+1]){
+		int ip = binsearch(x,z);;
+		for(int i=0; i<ip;i++){
 			double dx = x[i+1]-x[i];
 			double dy = y[i+1]-y[i];
 			integral += y[i]*dx+0.5*dy*dx;
-			i++;
 			}
-		integral += y[i]*(z-x[i]) + 0.5*(y[i+1]-y[i])/(x[i+1]+x[i])*(z-x[i])*(z-x[i]);
+		integral += y[ip]*(z-x[ip]) + 0.5*(y[ip+1]-y[ip])/(x[ip+1]+x[ip])*(z-x[ip])*(z-x[ip]);
 	return integral;
 	}
 
