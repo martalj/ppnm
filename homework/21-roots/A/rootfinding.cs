@@ -9,7 +9,7 @@ public class roots{
 		matrix J = new matrix(n,m);
 		vector deltax = new vector(x0.size);
 		for(int i=0; i<deltax.size; i++){
-			deltax[i] = x0[i]+Pow(2,-26);
+			deltax[i] = Abs(x0[i])+Pow(2,-26);
 		} //for
 
 		for(int j=0; j<n; j++){
@@ -31,7 +31,6 @@ public class roots{
 			int m=x0.size;
 			matrix Q = J.copy();
 			matrix R = new matrix(m,m);
-			gs.QRGSdecomp(J,R,Q);
 			vector Deltax = gs.QRGSsolve(Q,R,-f(x0));
 			double lambda = 1;
 			do{
