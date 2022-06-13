@@ -20,13 +20,17 @@ public static partial class lint{
 
 	public static double linterpInteg(double[] x, double[] y, double z){
 		double integral = 0;
-		int ip = binsearch(x,z);;
-		for(int i=0; i<ip;i++){
+		for(int i=0; i<x.Length;i++){
 			double dx = x[i+1]-x[i];
 			double dy = y[i+1]-y[i];
-			integral += y[i]*dx+0.5*dy*dx;
+			if(x[i+1]<z){
+				integral += y[i]*dx+0.5*dy*dx;
 			}
-		integral += y[ip]*(z-x[ip]) + 0.5*(y[ip+1]-y[ip])/(x[ip+1]+x[ip])*(z-x[ip])*(z-x[ip]);
+			else{
+				integral+= y[i]*(z-x[i])+0.5*(linterp(x,y,z)-y[i])*(z-x[i]);
+				break;
+			}
+		}
 	return integral;
 	}
 
