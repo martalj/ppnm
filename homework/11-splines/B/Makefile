@@ -1,18 +1,18 @@
-all: spline_random.png spline_x2.png Out.txt
+all: Out.txt spline_x2.png spline_Rand.png
 
 Out.txt: main.exe
 	mono $< > $@
 
-spline_random.png: Out.txt
-	cat fig.gpi | pyxplot
-
 spline_x2.png: Out.txt
-	cat fig2.gpi | pyxplot
+	cat figx2.gpi | pyxplot
 
-main.exe: main.cs lint.dll
-	mcs -target:exe -reference:lint.dll -out:$@ $<
+spline_Rand.png: Out.txt
+	cat figRand.gpi | pyxplot
 
-lint.dll: lint.cs
+main.exe: main.cs quadspline.dll
+	mcs -target:exe -reference:quadspline.dll -out:$@ $<
+
+quadspline.dll: quadspline.cs
 	mcs -target:library -out:$@ $<
 
 clean:
