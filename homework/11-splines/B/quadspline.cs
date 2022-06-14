@@ -54,20 +54,17 @@ public class qspline{
 
 	public double derivative(double z){
 		int i = binsearch(x,z);
-		double sol = b[i] + 2*c[i]*(z-x[i]);
-	return sol;}
+	return b[i] + 2*c[i]*(z-x[i]);
+	}
 
 	public double integral(double z){
+		int n = binsearch(x,z);
 		double integral = 0;
-		for(int i=0;i<x.Length;i++){
-			if(x[i+1]<z){
-				integral += y[i]*(x[i+1]-x[i])+b[i]*(x[i+1]*x[i+1]-x[i]*x[i])/2+c[i]*(x[i+1]*x[i+1]*x[i+1]-x[i]*x[i]*x[i])/3;
-			}
-			else{
-				integral += y[i]*(z-x[i])+b[i]*(z*z-x[i]*x[i])/2+c[i]*(z*z*z-x[i]*x[i]*x[i])/3;
-				break;
-			}
+		for(int i=0;i<n;i++){
+			integral += y[i]*(x[i+1]-x[i])+b[i]*(x[i+1]-x[i])*(x[i+1]-x[i])/2+c[i]*(x[i+1]-x[i])*(x[i+1]-x[i])*(x[i+1]-x[i])/3;
 		}
-	return integral;}
+		integral += y[n]*(z-x[n])+b[n]*(z-x[n])*(z-x[n])/2+c[n]*(z-x[n])*(z-x[n])*(z-x[n])/3;
+	return integral;
+	}
 
 }//class
