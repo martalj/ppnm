@@ -9,16 +9,12 @@ class main{
 		for(int i=0;i<x.Length;i++){
 			x[i] = i;
 			y[i] = i*i;
-			WriteLine($"{x[i]} {y[i]}");
 		}
 		
-		WriteLine();
-		WriteLine();
-
 		double[] p;
 		p = subspline.inner(x,y);
 		for(int j=0;j<p.Length;j++){
-			WriteLine($"{j} {p[j]}");
+			WriteLine($"{x[j]} {y[j]} {p[j]}");
 		}
 
 	}//Main
