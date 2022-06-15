@@ -2,8 +2,9 @@ using System;
 using static System.Console;
 using static System.Math;
 
-class main{
-	static void subspline(){
-	}
+public class subspline{
+	public subspline(double[] x, double[] y){
+		
 
-}
+	}//subspline
+}//class
