@@ -6,9 +6,8 @@ main.exe: main.cs matlib.dll
 LIBDIR = ../../../matlib
 
 matlib.dll: \
-	$(LIBDIR)/matrix/matrix.cs \
-	$(LIBDIR)/matrix/vector.cs \
-	gs.cs
+	quadspline.cs \
+	spline.cs
 	mcs -target:library -out:$@ $^
 
 %.exe: %.cs
