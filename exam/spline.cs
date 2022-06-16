@@ -3,6 +3,7 @@ using static System.Console;
 using static System.Math;
 
 public class subspline{
+	public double[] x,y,p,b,c,d;
 	public static double[] inner(double[] x, double[] y){
 		int n = x.Length;
 		double[] p = new double[n];

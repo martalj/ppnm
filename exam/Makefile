@@ -7,7 +7,8 @@ LIBDIR = ../../../matlib
 
 matlib.dll: \
 	quadspline.cs \
-	spline.cs
+	spline.cs \
+	cubicspline.cs
 	mcs -target:library -out:$@ $^
 
 %.exe: %.cs

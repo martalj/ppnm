@@ -17,5 +17,13 @@ class main{
 			WriteLine($"{x[j]} {y[j]} {p[j]}");
 		}
 
+		WriteLine();
+		WriteLine();
+
+		cspline spline = new cspline(x,y,p);
+		for(double k=1;k<x[x.Length-1];k+=0.1){
+			WriteLine($"{k} {spline.eval(k)}");
+		}
+
 	}//Main
 }//class
