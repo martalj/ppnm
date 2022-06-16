@@ -5,8 +5,8 @@ using System;
 public class cspline{
 	public double[] x,y,b,c,d;
 	public cspline(double[] xs, double[] ys){
-		x=xs;
-		y=ys;
+		x = xs;
+		y = ys;
 		int n = xs.Length;
 		double[] dx = new double[n-1]; 
 		double[] dy = new double[n-1];

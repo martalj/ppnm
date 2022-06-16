@@ -1,0 +1,6 @@
+set terminal png
+set output "spline2.png"
+set xlabel "x"
+set ylabel "y"
+plot "Out.txt" index 2 using 1:2 with points title "tab points",\
+"Out.txt" index 3 using 1:2 with lines title "spline"

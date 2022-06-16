@@ -3,8 +3,12 @@ using static System.Math;
 using System;
 
 public class cspline{
-	public double[] x,y,b,c,d;
-	public cspline(double[] x, double[] y, double[] p){
+	public double[] x,y,b,c,d,p;
+
+	public cspline(double[] xs, double[] ys, double[] ps){
+		x = xs;
+		y = ys;
+		p = ps;
 		int n = x.Length;
 		double[] dx = new double[n-1]; 
 		double[] dy = new double[n-1];
@@ -19,7 +23,7 @@ public class cspline{
 			dp[i] = p[i+1]-p[i];
 
 			b[i] = p[i];
-			c[i] = 3*dy[i]/(dx[i]*dx[i]) - 3*p[i]/dx[i] -dp[i]/dx[i]; 
+			c[i] = 3*dy[i]/(dx[i]*dx[i]) - 3*p[i]/dx[i] - dp[i]/dx[i]; 
 			d[i] = dp[i]/(dx[i]*dx[i]) - 2*dy[i]/(dx[i]*dx[i]*dx[i]) + 2*p[i]/(dx[i]*dx[i]);
 		}//for
 

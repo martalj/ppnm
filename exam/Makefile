@@ -1,9 +1,17 @@
+all: Out.txt spline.png spline2.png
+
 Out.txt: main.exe
 	mono $< > $@
 
 main.exe: main.cs matlib.dll
 
 LIBDIR = ../../../matlib
+
+spline.png: Out.txt
+	cat fig.gpi | pyxplot
+
+spline2.png: Out.txt
+	cat fig2.gpi | pyxplot
 
 matlib.dll: \
 	quadspline.cs \
