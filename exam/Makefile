@@ -1,4 +1,4 @@
-all: Out.txt spline.png spline2.png
+all: Out.txt spline.png spline2.png spline3.png spline4.png
 
 Out.txt: main.exe
 	mono $< > $@
@@ -12,6 +12,12 @@ spline.png: Out.txt
 
 spline2.png: Out.txt
 	cat fig2.gpi | pyxplot
+
+spline3.png: Out.txt
+	cat fig3.gpi | pyxplot
+
+spline4.png: Out.txt
+	cat fig4.gpi | pyxplot
 
 matlib.dll: \
 	quadspline.cs \

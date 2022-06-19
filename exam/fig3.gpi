@@ -1,0 +1,10 @@
+set terminal png
+set output "spline3.png"
+set xlabel "x"
+set ylabel "y"
+set key left
+set title "Jump"
+plot "Out.txt" index 4 using 1:2 with points title "Tab points",\
+"Out.txt" index 5 using 1:2 with lines title "Subspline",\
+"Out.txt" index 5 using 1:5 with lines linetype 2 title "Plain qspline",\
+"Out.txt" index 5 using 1:6 with lines linetype 3 title "Plain cspline"
