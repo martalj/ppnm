@@ -18,7 +18,7 @@ class main{
 		WriteLine();
 
 		qspline spline_Rand = new qspline(x,y);
-		for(double l=1; l<x[x.Length-1]; l+=0.1){
+		for(double l=0; l<x[x.Length-1]; l+=0.1){
 			double sol = spline_Rand.eval(l);
 			WriteLine($"{l} {sol} {spline_Rand.derivative(l)} {spline_Rand.integral(l)}");
 

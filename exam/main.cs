@@ -22,8 +22,10 @@ class main{
 		WriteLine();
 
 		cspline spline = new cspline(x,y,p);
+		plainqspline pqspline = new plainqspline(x,y);
+		plaincspline pcspline = new plaincspline(x,y);
 		for(double k=0;k<x[n-1];k+=0.1){
-			WriteLine($"{k} {spline.eval(k)} {spline.derivative(k)} {spline.integral(k)}");
+			WriteLine($"{k} {spline.eval(k)} {spline.derivative(k)} {spline.integral(k)} {pqspline.eval(k)} {pcspline.eval(k)}");
 		}
 
 		WriteLine();
@@ -40,8 +42,10 @@ class main{
 		
 		double[] p2 = subspline.inner(x2,y2);
 		cspline spline2 = new cspline(x2,y2,p2);
+		plainqspline pqspline2 = new plainqspline(x2,y2);
+		plaincspline pcspline2 = new plaincspline(x2,y2);
 		for(double k=0;k<x2[x2.Length-1];k+=0.1){
-			WriteLine($"{k} {spline2.eval(k)} {spline2.derivative(k)} {spline2.integral(k)}");		
+			WriteLine($"{k} {spline2.eval(k)} {spline2.derivative(k)} {spline2.integral(k)} {pqspline2.eval(k)} {pcspline2.eval(k)}");	
 		}
 	}//Main
 }//class

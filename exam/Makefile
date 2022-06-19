@@ -16,7 +16,9 @@ spline2.png: Out.txt
 matlib.dll: \
 	quadspline.cs \
 	spline.cs \
-	cubicspline.cs
+	cubicspline.cs \
+	11qspline.cs \
+	11cspline.cs
 	mcs -target:library -out:$@ $^
 
 %.exe: %.cs
