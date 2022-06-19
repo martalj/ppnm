@@ -26,4 +26,4 @@ matlib.dll: \
 	mcs -t:library $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
 
 clean:
-	$(RM) *.exe *.txt *.dll
+	$(RM) *.exe *.txt *.dll *.png

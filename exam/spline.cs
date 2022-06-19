@@ -19,21 +19,21 @@ public class subspline{
 			y_inner[1] = y[i];
 			y_inner[2] = y[i+1];
 			
-			
 			qspline spline_inner = new qspline(x_inner,y_inner);
 
 			if(i == 1){
-				p[i-1] = spline_inner.derivative(i-1);
+				p[i-1] = spline_inner.derivative(x_inner[0]);
 			}
 
-			p[i] = spline_inner.derivative(i);
+			p[i] = spline_inner.derivative(x_inner[1]);
+
 
 			if(i == n-2){
-				p[i+1] = spline_inner.derivative(i+1);
+				p[i+1] = spline_inner.derivative(x_inner[2]);
 			}
 
 		} //for i
-
+		
 	return p;
 	} //inner
 
