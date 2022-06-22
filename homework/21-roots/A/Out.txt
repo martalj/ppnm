@@ -1,1 +1,6 @@
-The root is at -1.50000000216744. The function in this point yields -4.33488356321732E-09 
+Searching for roots for the function 2x+3:
+The root is at -1.50000000216744. The function in this point yields -4.33488356321732E-09
+
+
+Searching for extremums of Rosenbrock's valley function by searching for the roots of its gradient:
+The root is at 1.00000000003462,1.00000000041564. The function in this point yields -1.38492282530933E-07,6.92807589075528E-08
