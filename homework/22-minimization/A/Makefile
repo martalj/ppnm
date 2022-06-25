@@ -8,7 +8,7 @@ LIBDIR = ../../../matlib
 matlib.dll: \
 	$(LIBDIR)/matrix/matrix.cs \
 	$(LIBDIR)/matrix/vector.cs \
-	gs.cs
+	minimize.cs
 	mcs -target:library -out:$@ $^
 
 %.exe: %.cs

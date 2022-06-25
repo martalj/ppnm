@@ -1,0 +1,2 @@
+Rosenbrock minimum is at 0.999999999999955,0.999999999999989, found in 29 steps
+Himmelblau minimum is at 3.00001503670369,1.99996467774328, found in 474 steps
