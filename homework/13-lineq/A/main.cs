@@ -22,7 +22,7 @@ class main{
 			}
 		
 		
-		A.print("A");
+		A.print("A = ");
 		matrix R = new matrix(m,m);
 		matrix Q = A.copy();
 		gs.QRGSdecomp(A,R,Q);
@@ -30,25 +30,25 @@ class main{
 		matrix QTQ = Q.transpose()*Q;
 		matrix QR = Q*R;
 				
-		QTQ.print("Q^T*Q");
-		QR.print("Q*R");
-		R.print("R");
-		Q.print("Q");
+		QTQ.print("Q^T*Q should be = 1:");
+		QR.print("Q*R should be = A:");
+		R.print("R should be upper triangular:");
+		Q.print("Q = ");
 
 		//vector b = new vector(1,3,5,4);
 		vector b = new vector(n);
 		for(int i=0;i<n;i++){
 			b[i] = rand.Next(0,10);
 			}
-		A_sqr.print("A_sqr");
-		b.print("b");
+		A_sqr.print("A_sqr = ");
+		b.print("b = ");
 		matrix R_sqr = new matrix(n,n);
 		matrix Q_sqr = A_sqr.copy();
 		gs.QRGSdecomp(A_sqr,R_sqr,Q_sqr);
 		vector x = gs.QRGSsolve(Q_sqr,R_sqr,b);
-		x.print("x");
+		x.print("x = ");
 		vector c = A_sqr*x;
-		c.print("A_sqr*x");
+		c.print("A_sqr*x should be = b:");
 		}
 
 }

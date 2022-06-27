@@ -9,7 +9,7 @@ public class main{
 	}
 
 public static void Main(){
-	for(double x=0.1;x<=10;x+=1.0/32)
+	for(double x=0.1;x<=20;x+=1.0/32)
 		WriteLine($"{x} {lngamma(x)}");
 	}
 

@@ -20,7 +20,7 @@ class main{
 		matrix B = gs.QRGSinverse(Q, R);
 		B.print("B");
 		matrix AA_inv = A*B;
-		AA_inv.print("A*B");
+		AA_inv.print("A*B should be = I:");
 		}
 
 }

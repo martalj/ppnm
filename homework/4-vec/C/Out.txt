@@ -1,1 +1,9 @@
-False
+u = 2 3 4
+v = 4 5 6
+Are u and v approximately the same?: False
+u = 1E-10 1E-10 2E-10
+v = 2E-10 2E-10 6E-10
+Are u and v approximately the same?: True
+u = 1 1.4142135623731 2.23606797749979
+v = 1.4142135623731 1 2.23606797749979
+Are u and v approximately the same?: False

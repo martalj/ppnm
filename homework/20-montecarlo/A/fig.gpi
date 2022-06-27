@@ -3,5 +3,6 @@ set output "mc.png"
 set xlabel "z"
 set ylabel "y"
 set key bottom right
+set title "Wikipedia example 'double integral over rectangle'"
 plot "Out.txt" index 0 using 1:2 with linespoints linetype 2 title "Monte Carlo", 1719 with lines title "Exact"
 
